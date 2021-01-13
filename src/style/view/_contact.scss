@@ -1,0 +1,20 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        margin-top: 6vw;
+        width: 15vw;
+    }
+    h1{
+        padding: 3vw;
+        // color:$main-color;
+        font-size: 2vw;
+        font-weight:500;
+        background: -webkit-linear-gradient(bottom,#83CB9C 0,#4CAD6E 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

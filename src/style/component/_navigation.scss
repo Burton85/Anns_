@@ -1,0 +1,51 @@
+h1.logo{
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font-size: 4rem;
+  font-weight: 550;
+  letter-spacing: 2rem;
+} 
+.nav {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  // grid-template-rows: 3rem;
+  grid-template-columns:30% auto auto auto 30%;
+  &-router{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-size: 1.5rem;
+    font-weight: 550;
+    &:nth-child(1){
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    &::after{
+      opacity: 0;
+      content: '';
+      bottom: 30%;
+      left: 40%;
+      width: 0.5vw;
+      height: 0.4vw;
+      position: absolute;
+      border-radius: 0.2vw;
+      transition: all 0.5s;
+      background-color: $main-color;
+    }
+  }
+  &-active{
+    &::after{
+      left:48%;
+      opacity: 1;
+    }
+  }
+}
+

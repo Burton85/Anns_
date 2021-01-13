@@ -1,0 +1,40 @@
+.diagram {
+    margin: 0 auto; 
+    background: url("./assets/img/diagram.jpg") no-repeat center/80%;
+    width: 80%;
+    height: 28vw;
+    display: grid;
+    grid-template-rows: 10vw 6vw 5vw 10vw;
+    .dot-con{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .dot{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1.3vw;
+            width: 1.4vw;
+        }
+    }
+    &-tit {
+        text-align: center;
+        font-size: 1.5vw;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        letter-spacing: 0.5vw;
+        color: #fff;
+        line-height: 1.5;
+    }
+    &-p {
+        color: #fff;
+        font-size: 1vw;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,48 @@
+.mado {
+
+    img {
+        width: 100%;
+    }
+    &-tit {
+        color: $sec-color;
+        margin: 8vw 0 3vw;
+        text-align: center;
+        font-size: 1.5vw;
+        font-weight: 500;
+    }
+    ul {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        transform: translateX(15%);
+        li {
+            color: $sec-color;
+            width: auto;
+            text-align: center;
+            font-size: 1vw;
+            letter-spacing: 0.5vw;
+            line-height: 1.5;
+            font-weight: 500;
+            span {
+                font-weight: lighter;
+                font-size: 1vw;
+                color: $sub-color;
+            }
+        }
+    }
+    h3 {
+        color: $sec-color;
+        text-align: center;
+        font-size: 1vw;
+        padding: 1vw;
+        line-height: 1.5;
+    }
+    h2 {
+        margin: 1vw 0;
+        font-size: 1.5vw;
+        color: $main-color;
+        font-weight: 550;
+        text-align: center;
+    }
+}
