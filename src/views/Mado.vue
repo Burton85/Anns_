@@ -8,6 +8,7 @@
             <p class="diagram-p">Madou<br />Farmers’Association</p>
         </div>
         <img src="@/assets/img/mado-1.jpg" alt="mockup" />
+        <h2 class="tit"><a href="https://www.madou.org.tw" class="tit" target="_blank">https://www.madou.org.tw</a></h2>
         <h1 class="mado-tit">網站改版四大更新</h1>
         <ul>
             <li>・全站分類更清晰、便利 <span>－搜尋更便利，友善瀏覽</span></li>

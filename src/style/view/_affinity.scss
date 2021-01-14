@@ -1,0 +1,145 @@
+.affinity {
+    .aff {
+        &_tit {
+            display: block;
+            // background-color: $main-color;
+            // background-image: linear-gradient(#83CB9C,#4CAD6E);
+            // box-shadow: 0.1vw 0.1vw 0.5vw $sec-color;
+            background: url("./assets/img/aff_tit.png") no-repeat center/100%;
+            border-radius: 1.8vw;
+            width: 16.25vw;
+            height: 3.5vw;
+            color: $nav-color;
+            line-height: 3.5vw;
+            font-weight: 500;
+            margin: 3vw auto;
+            font-size: 1.2vw;
+            text-align: center;
+            letter-spacing: 0.2vw;
+            padding-left: 0.8vw;
+        }
+        &_box {
+            display: grid;
+            grid-template-rows: repeat(4, 17vw);
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &_question {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 30% 70%;
+            border-radius: 3vw;
+            width: 95%;
+            height: 90%;
+            background-color: $af_qa_color;
+            box-shadow: 0.1vw 0.07vw 0.7vw -0.3vw $shadow;
+
+            .qa {
+                &_tit {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    font-size: 1.5vw;
+                    font-weight: 550;
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: block;
+                        content: "";
+                        width: 90%;
+                        // height: 1px;
+                        border-top: 0.15vw dashed $yellow;
+                    }
+                }
+                &_con {
+                    font-size: 1vw;
+                    display: inline-block;
+                    width: 80%;
+                    line-height: 1.5;
+                    margin: 1vw auto;
+                }
+            }
+        }
+        &_content {
+            color: $sec-color;
+            // text-align: center;
+            font-size: 1vw;
+            padding: 1vw;
+            line-height: 1.5;
+            span {
+                color: $main-color;
+            }
+        }
+        &_container {
+            color: $sec-color;
+            font-size: 1vw;
+            padding: 1vw;
+            line-height: 1.5;
+            display: grid;
+            grid-template-rows: repeat(2, 26vw);
+            grid-template-columns: 50% 50%;
+            img:nth-of-type(2) {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+            .aff_content {
+                h1 {
+                    color: #333;
+                    font-weight: bold;
+                    font-size: 1.2vw;
+                    display: inline-block;
+                    // line-height: 8;
+                    padding: 8vw 0 2vw;
+                }
+                p {
+                    width: 50%;
+                }
+            }
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .affinity {
+        .aff {
+            &_tit {
+                width: 40vw;
+                height: 10vw;
+                font-size: 3.2vw;
+                line-height: 10vw;
+            }
+            &_question {
+                .qa {
+                    &_tit {
+                        font-size: 2.5vw;
+                    }
+                    &_con {
+                        font-size: 2vw;
+                    }
+                }
+            }
+            &_box{
+                grid-template-rows: repeat(4, 25vw);
+            }
+            &_content{
+                font-size: 3.5vw;
+            }
+            &_container{
+                grid-template-rows: repeat(2, 50vw);
+                .aff_content{
+                    font-size: 3.5vw;
+                    p {
+                        width: 80%;
+                    }
+                    h1{
+                        font-size: 4vw;
+                    }
+                }
+            }
+        }
+    }
+}

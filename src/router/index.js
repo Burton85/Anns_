@@ -74,6 +74,14 @@ const routes = [
             title: "ILLUSTRATOR",
         },
     },
+    {
+        path: "/affinity",
+        name: "affinity",
+        component: () => import("../views/Affinity.vue"),
+        meta: {
+            title: "UI/UX",
+        },
+    },
 ];
 
 const router = createRouter({

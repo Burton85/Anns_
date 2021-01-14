@@ -26,54 +26,39 @@
 export default {
     data() {
         return {
-            fadeList: [false, false, false, false, false],
+            fadeList: [false, false, false],
         };
     },
     mounted() {
         this.fadeList[0] = true;
         document.addEventListener("scroll", () => {
-            for (let i = 0; i < 3; i++) {
-                switch (i) {
-                    case 0:
-                        if (this.$refs.a.getBoundingClientRect().top - window.innerHeight < -200) {
-                            this.fadeList[i] = true;
-                        } else {
-                            this.fadeList[i] = false;
-                        }
-                        break;
-                    case 1:
-                        if (this.$refs.b.getBoundingClientRect().top - window.innerHeight < -200) {
-                            this.fadeList[i] = true;
-                        } else {
-                            this.fadeList[i] = false;
-                        }
-                        break;
-                    case 2:
-                        if (this.$refs.c.getBoundingClientRect().top - window.innerHeight < -200) {
-                            this.fadeList[i] = true;
-                        } else {
-                            this.fadeList[i] = false;
-                        }
-                        break;
-                    case 3:
-                        if (this.$refs.d.getBoundingClientRect().top - window.innerHeight < -200) {
-                            this.fadeList[i] = true;
-                        } else {
-                            this.fadeList[i] = false;
-                        }
-                        break;
-                    case 4:
-                        if (this.$refs.e.getBoundingClientRect().top - window.innerHeight < -200) {
-                            this.fadeList[i] = true;
-                        } else {
-                            this.fadeList[i] = false;
-                        }
-                        break;
+            if (this.$refs.a) {
+                for (let i = 0; i < 3; i++) {
+                    switch (i) {
+                        case 0:
+                            if (this.$refs.a.getBoundingClientRect().top - window.innerHeight < -200) {
+                                this.fadeList[i] = true;
+                            } else {
+                                this.fadeList[i] = false;
+                            }
+                            break;
+                        case 1:
+                            if (this.$refs.b.getBoundingClientRect().top - window.innerHeight < -200) {
+                                this.fadeList[i] = true;
+                            } else {
+                                this.fadeList[i] = false;
+                            }
+                            break;
+                        case 2:
+                            if (this.$refs.c.getBoundingClientRect().top - window.innerHeight < -200) {
+                                this.fadeList[i] = true;
+                            } else {
+                                this.fadeList[i] = false;
+                            }
+                            break;
+                    }
                 }
             }
-
-            // console.log(this.$refs.b.getBoundingClientRect(),window.innerHeight)
-            // console.log(document.scrollingElement.scrollTop,e)
         });
     },
 };

@@ -1,5 +1,4 @@
 .mado {
-
     img {
         width: 100%;
     }
@@ -38,11 +37,31 @@
         padding: 1vw;
         line-height: 1.5;
     }
-    h2 {
+    .tit {
         margin: 1vw 0;
         font-size: 1.5vw;
         color: $main-color;
         font-weight: 550;
         text-align: center;
+    }
+}
+@media screen and (max-width: 750px) {
+    .mado {
+        ul {
+            transform: translateX(5%);
+            li {
+                font-size: 3vw;
+                letter-spacing: 0;
+                span {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+        &-tit {
+            font-size: 4vw;
+        }
+        h3 {
+            font-size: 4vw;
+        }
     }
 }

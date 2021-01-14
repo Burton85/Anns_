@@ -70,3 +70,40 @@
         transform: rotate(40deg);
     }
 }
+
+@media screen and (max-width: 750px) {
+    .container {
+        margin-top: 8vw;
+        .slider {
+            background: url(./assets/img/home_m.jpg) no-repeat center/auto 100%;
+            position: relative;
+            width: 90%;
+            margin: auto;
+            height: 130vw;
+            border-radius: 13vw;
+            border-radius: 20vw;
+            .flower {
+                &:nth-of-type(1) {
+                    width: 29vw;
+                    right: -5vw;
+                    bottom: -20vw;
+                    height: 26.672vw;
+                }
+                &:nth-of-type(2) {
+                    width: 8vw;
+                    height: 8vw;
+                    right: 0vw;
+                    bottom: -17vw;
+                    animation: rota 0.5s infinite alternate;
+                }
+                &:nth-of-type(3) {
+                    width: 8vw;
+                    height: 8vw;
+                    right: 20vw;
+                    bottom: -12vw;
+                    animation: 0.5s rota 0.5s infinite alternate;
+                }
+            }
+        }
+    }
+}

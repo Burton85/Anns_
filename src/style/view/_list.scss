@@ -7,7 +7,7 @@
     .works {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 40% 15% 1fr;
+        grid-template-rows: 40% 30% 1fr;
         cursor: pointer;
         opacity: 0;
         height: 100%;
@@ -28,6 +28,7 @@
             color: #fff;
             line-height: 1.6;
             &-title {
+                display: flex;
                 font-size: 2vw;
                 letter-spacing: 15px;
                 align-items: flex-end;
@@ -94,5 +95,35 @@
     to {
         opacity: 0;
         transform: translateY(10%);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .list {
+        grid-template-rows: repeat(3, 60vw) 1fr;
+        grid-row-gap: 5rem;
+        .works {
+            border-radius: 18vw;
+            .work {
+                &-title {
+                    font-size: 4vw;
+                    letter-spacing: 10px;
+
+                }
+                &-during::after {
+                    top: 70%;
+                    width: 9vw;
+                    height: 3vw;
+                }
+                &-title-en {
+                    letter-spacing: 5px;
+                    font-size: 3vw;
+                }
+                &-during {
+                    letter-spacing: 5px;
+                    font-size: 3vw;
+                }
+            }
+        }
     }
 }

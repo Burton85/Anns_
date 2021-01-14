@@ -1,15 +1,15 @@
 .diagram {
-    margin: 0 auto; 
+    margin: 0 auto;
     background: url("./assets/img/diagram.jpg") no-repeat center/80%;
     width: 80%;
     height: 28vw;
     display: grid;
     grid-template-rows: 10vw 6vw 5vw 10vw;
-    .dot-con{
+    .dot-con {
         width: 100%;
         height: 100%;
         position: relative;
-        .dot{
+        .dot {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -36,5 +36,25 @@
         line-height: 1.5;
         letter-spacing: 10px;
         text-align: center;
+    }
+}
+@media screen and (max-width: 750px) {
+    .diagram {
+        width: 85%;
+        height: 42vw;
+        grid-template-rows: 12vw 6vw 5vw 10vw;
+        &-tit{
+            font-size: 2.5vw;
+        }
+        .dot-con {
+            .dot {
+                height: 2.3vw;
+                width: 2.4vw;
+            }
+        }
+        &-p {
+            font-size: 2.5vw;
+            letter-spacing: 5px;
+        }
     }
 }
